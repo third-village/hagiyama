@@ -13,5 +13,10 @@ const url = process.env.WEBHOOK_URL;
 if (!url) {
   console.log("Please set WEBHOOK_URL");
 } else {
-  postData(url, { content: "mayuko" });
+  while (true) {
+    postData(url, { content: "🧸" });
+    
+    // 24時間待機
+    await new Promise((resolve) => setTimeout(resolve, 1000 * 60 * 60 * 24));
+  }
 }
