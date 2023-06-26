@@ -15,7 +15,6 @@ if (!url) {
 } else {
   while (true) {
     postData(url, { content: "🧸" });
-    
     // 24時間待機
     await new Promise((resolve) => setTimeout(resolve, 1000 * 60 * 60 * 24));
   }
