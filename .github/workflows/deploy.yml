@@ -34,7 +34,7 @@ jobs:
         gcloud auth configure-docker us-west1-docker.pkg.dev
 
     - name: Build and push Docker image
-      uses: docker/build-push-action@v2
+      uses: docker/build-push-action@v4
       with:
         push: true
         tags: us-west1-docker.pkg.dev/hagiyama/hagiyama/bot:latest
